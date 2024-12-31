@@ -13,8 +13,8 @@ class BackGround extends StatelessWidget {
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              AppColors.primaryColor,
-              AppColors.secondaryColor,
+              AppColors.BackgroundColor,
+              AppColors.BackgroundColor2,
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
