@@ -13,9 +13,9 @@ class AppImages {
   static const logo1 = 'assets/images/logo1.png';
   static const splashScreen = 'assets/images/splash.png';
   static const background = 'assets/images/background.jpg';
-  static const s1 = 'assets/images/start.png';
-  static const s2 = 'assets/images/start.png';
-  static const s3 = 'assets/images/start.png';
+  static const s1 = 'assets/images/1.png';
+  static const s2 = 'assets/images/2.png';
+  static const s3 = 'assets/images/3.png';
 }
 
 class AppStrings {

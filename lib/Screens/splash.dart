@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:nojia/Screens/Authentication/login.dart';
 import 'package:nojia/Screens/Authentication/register.dart';
 import 'package:nojia/constants.dart';
-import 'package:nojia/widget/BackGround.dart';
 import 'package:nojia/widget/button.dart';
 
 class SplashScreens extends StatefulWidget {
@@ -45,7 +44,7 @@ class _SplashScreensState extends State<SplashScreens> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.BackgroundColor2,
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: Column(
         children: [
           Expanded(
@@ -81,7 +80,7 @@ class _SplashScreensState extends State<SplashScreens> {
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: _currentPage == index
-                              ? AppColors.textColor
+                              ? AppColors.primaryColor
                               : AppColors.textColor1),
                     ),
                   ),
@@ -96,7 +95,7 @@ class _SplashScreensState extends State<SplashScreens> {
                         curve: Curves.easeInOut,
                       );
                     },
-                    backgroundColor: AppColors.textColor,
+                    backgroundColor: AppColors.primaryColor,
                     textColor: AppColors.textColor1,
                   )
                 else
@@ -108,11 +107,11 @@ class _SplashScreensState extends State<SplashScreens> {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const Register(),
+                              builder: (context) => const Login(),
                             ),
                           );
                         },
-                        backgroundColor: AppColors.textColor,
+                        backgroundColor: AppColors.primaryColor,
                         textColor: AppColors.textColor1,
                       ),
                       SizedBox(height: 10),
@@ -126,7 +125,7 @@ class _SplashScreensState extends State<SplashScreens> {
                             ),
                           );
                         },
-                        backgroundColor: AppColors.textColor,
+                        backgroundColor: AppColors.primaryColor,
                         textColor: AppColors.textColor1,
                       ),
                     ],
@@ -179,7 +178,7 @@ class SplashWidget extends StatelessWidget {
               description,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                color: AppColors.textColor1,
+                color: AppColors.primaryColor,
                 fontSize: 16,
               ),
             ),
