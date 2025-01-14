@@ -16,6 +16,8 @@ class AppImages {
   static const s1 = 'assets/images/1.png';
   static const s2 = 'assets/images/2.png';
   static const s3 = 'assets/images/3.png';
+  static const cam = 'assets/images/cam.png';
+  static const pool = 'assets/images/pool.png';
 }
 
 class AppStrings {

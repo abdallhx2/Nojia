@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:nojia/Components/textfaild.dart';
-import 'package:nojia/Screens/Authentication/register.dart';
-import 'package:nojia/constants.dart';
-import 'package:nojia/widget/button.dart';
-import 'package:nojia/Screens/Authentication/home.dart';
+import 'package:nojia/route.dart';
+import '../../Components/textfaild.dart';
+import 'register.dart';
+import 'verification.dart';
+import '../../constants.dart';
+import '../../Components/button.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -96,12 +97,7 @@ class _LoginState extends State<Login> {
                     Button(
                       text: 'login',
                       onPressed: () {
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const home(),
-                          ),
-                        );
+                        AppNavigation.navigate(context, Verification());
                       },
                       backgroundColor: AppColors.primaryColor,
                       textColor: Colors.white,
@@ -133,12 +129,7 @@ class _LoginState extends State<Login> {
                           ),
                           TextButton(
                             onPressed: () {
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const Register(),
-                                ),
-                              );
+                              AppNavigation.navigate(context, Register());
                             },
                             child: Text(
                               'Register',

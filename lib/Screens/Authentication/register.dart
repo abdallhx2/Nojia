@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:nojia/Components/textfaild.dart';
-import 'package:nojia/Screens/Authentication/login.dart';
-import 'package:nojia/constants.dart';
-import 'package:nojia/widget/button.dart';
+import 'package:nojia/route.dart';
+import '../../Components/textfaild.dart';
+import 'login.dart';
+import '../../constants.dart';
+import '../../Components/button.dart';
 
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
@@ -124,15 +125,6 @@ class _RegisterState extends State<Register> {
                     ),
                     const SizedBox(height: 10),
 
-                    CustomTextField(
-                      label: 'Date of Birth',
-                      hint: 'mm/dd/yyyy',
-                      keyboardType: TextInputType.datetime,
-                      suffixIcon: const Icon(
-                        Icons.calendar_today,
-                        color: Colors.grey,
-                      ),
-                    ),
                     const SizedBox(height: 15),
 
                     Button(
@@ -154,12 +146,7 @@ class _RegisterState extends State<Register> {
                           ),
                           TextButton(
                             onPressed: () {
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const Login(),
-                                ),
-                              );
+                              AppNavigation.navigate(context, Login());
                             },
                             child: const Text(
                               'Login',
