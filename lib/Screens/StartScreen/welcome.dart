@@ -15,7 +15,7 @@ class WelcomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "Welcome to",
               style: TextStyle(
                 color: Colors.white,
@@ -27,7 +27,7 @@ class WelcomeScreen extends StatelessWidget {
               width: 200,
               height: 200,
             ),
-            Text(
+            const Text(
               "Nojia",
               style: TextStyle(
                 color: Colors.white,

@@ -105,16 +105,16 @@ class _SplashScreensState extends State<SplashScreens> {
                       Button(
                         text: " Login",
                         onPressed: () {
-                          AppNavigation.navigate(context, Login());
+                          AppNavigation.navigate(context, const Login());
                         },
                         backgroundColor: AppColors.primaryColor,
                         textColor: AppColors.textColor1,
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Button(
                         text: " Create Account",
                         onPressed: () {
-                          AppNavigation.navigate(context, Register());
+                          AppNavigation.navigate(context, const Register());
                         },
                         backgroundColor: AppColors.primaryColor,
                         textColor: AppColors.textColor1,

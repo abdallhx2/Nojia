@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:nojia/route.dart';
+import 'package:nojia/services/auth_service.dart';
 import '../../Components/textfaild.dart';
 import 'register.dart';
-import 'verification.dart';
 import '../../constants.dart';
 import '../../Components/button.dart';
 
 class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+  const Login({super.key});
 
   @override
   State<Login> createState() => _LoginState();
 }
 
 class _LoginState extends State<Login> {
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
   bool _isPasswordVisible = false;
 
   @override
@@ -74,6 +77,7 @@ class _LoginState extends State<Login> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     CustomTextField(
+                      controller: _emailController,
                       label: 'Email',
                       hint: 'Enter your email',
                       keyboardType: TextInputType.emailAddress,
@@ -81,8 +85,9 @@ class _LoginState extends State<Login> {
                     const SizedBox(height: 10),
 
                     CustomTextField(
+                      controller: _passwordController,
                       label: 'Password',
-                      hint: 'Create password',
+                      hint: 'Password',
                       isPassword: true,
                       isVisible: _isPasswordVisible,
                       onVisibilityToggle: () {
@@ -95,15 +100,18 @@ class _LoginState extends State<Login> {
 
                     // Login Button
                     Button(
-                      text: 'login',
+                      text: 'Login',
                       onPressed: () {
-                        AppNavigation.navigate(context, Verification());
+                        AuthServices.handleSignIn(
+                          context,
+                          emailController: _emailController,
+                          passwordController: _passwordController,
+                        );
                       },
                       backgroundColor: AppColors.primaryColor,
                       textColor: Colors.white,
                       width: double.infinity,
                     ),
-
                     const SizedBox(height: 16),
 
                     // Forgot Password
@@ -129,9 +137,9 @@ class _LoginState extends State<Login> {
                           ),
                           TextButton(
                             onPressed: () {
-                              AppNavigation.navigate(context, Register());
+                              AppNavigation.navigate(context, const Register());
                             },
-                            child: Text(
+                            child: const Text(
                               'Register',
                               style: TextStyle(color: AppColors.primaryColor),
                             ),

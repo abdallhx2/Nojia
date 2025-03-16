@@ -18,7 +18,7 @@ class _StartState extends State<Start> {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
       _requestNotificationPermission().then((_) {
-        AppNavigation.navigateReplace(context, SplashScreens());
+        AppNavigation.navigateReplace(context, const SplashScreens());
       });
     });
   }

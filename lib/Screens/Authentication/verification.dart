@@ -40,7 +40,7 @@ class Verification extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
           
               // Main content
               Padding(
@@ -125,7 +125,7 @@ class Verification extends StatelessWidget {
                     Button(
                         text: "verification",
                         onPressed: () {
-                          AppNavigation.navigate(context, IpCamera());
+                          AppNavigation.navigate(context, const IpCamera());
                         },
                         backgroundColor: AppColors.primaryColor,
                         textColor: AppColors.BackgroundColor2)

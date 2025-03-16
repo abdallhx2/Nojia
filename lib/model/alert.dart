@@ -1,18 +1,45 @@
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+
+
 
 class AlertItem {
   final String title;
   final String time;
   final AlertType type;
+  final String id;
 
   AlertItem({
     required this.title,
     required this.time,
     required this.type,
+    required this.id,
   });
-}
 
+  factory AlertItem.fromFirestore(DocumentSnapshot doc) {
+    final data = doc.data() as Map<String, dynamic>;
+    return AlertItem(
+      id: doc.id,
+      title: data['title'] ?? '',
+      time: _formatTimestamp(data['timestamp'] as Timestamp),
+      type: _getAlertTypeFromString(data['type'] as String),
+    );
+  }
+
+  static String _formatTimestamp(Timestamp timestamp) {
+    final date = timestamp.toDate();
+    return '${date.hour}:${date.minute.toString().padLeft(2, '0')}';
+  }
+
+  static AlertType _getAlertTypeFromString(String type) {
+    return switch (type.toLowerCase()) {
+      'danger' => AlertType.danger,
+      'success' => AlertType.success,
+      _ => AlertType.info,
+    };
+  }
+}
 enum AlertType {
   danger(
     icon: Icons.warning_amber_rounded,

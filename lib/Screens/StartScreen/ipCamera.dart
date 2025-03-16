@@ -17,7 +17,7 @@ class IpCamera extends StatelessWidget {
           child: Column(
             children: [
               // Logo and Title
-              SizedBox(height: 60),
+              const SizedBox(height: 60),
               Container(
                 child: const Text(
                   "IP address connected\nto the camer",
@@ -43,8 +43,8 @@ class IpCamera extends StatelessWidget {
               const SizedBox(height: 40),
 
               // IP Address Input
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
                 child: CustomTextField(
                   label: 'IP Address',
                   hint: 'Enter your IP address',
@@ -60,7 +60,7 @@ class IpCamera extends StatelessWidget {
                 child: Button(
                   text: "Check",
                   onPressed: () {
-                    AppNavigation.navigate(context, WelcomeScreen());
+                    AppNavigation.navigate(context, const WelcomeScreen());
                   },
                   backgroundColor: AppColors.primaryColor,
                   textColor: AppColors.BackgroundColor2,

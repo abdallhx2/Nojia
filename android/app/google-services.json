@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "634123822178",
+    "project_id": "nojia-a27d4",
+    "storage_bucket": "nojia-a27d4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634123822178:android:e3d5862a9f445a872b9d3b",
+        "android_client_info": {
+          "package_name": "com.example.n"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABGHGVyn7oV4BhtumL9R5blpXM3LFUh9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634123822178:android:c65e78bf9f72dfbd2b9d3b",
+        "android_client_info": {
+          "package_name": "com.example.nojia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABGHGVyn7oV4BhtumL9R5blpXM3LFUh9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

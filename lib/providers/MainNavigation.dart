@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nojia/Screens/MainScreen/Profile.dart';
 import 'package:nojia/constants.dart';
-import 'package:nojia/Screens/MainScreen/home.dart';
+import 'package:nojia/Screens/MainScreen/Home/body.dart';
 import 'package:nojia/Screens/MainScreen/Notification.dart';
 
 class MainNavigation extends StatefulWidget {

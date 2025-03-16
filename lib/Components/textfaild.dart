@@ -14,7 +14,7 @@ class CustomTextField extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
 
   const CustomTextField({
-    Key? key,
+    super.key,
     required this.label,
     required this.hint,
     this.isPassword = false,
@@ -26,7 +26,7 @@ class CustomTextField extends StatelessWidget {
     this.validator,
     this.contentPadding =
         const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
